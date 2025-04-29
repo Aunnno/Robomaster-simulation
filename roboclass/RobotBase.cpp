@@ -19,7 +19,7 @@ class Robot
             // decisions[i]=0;
         }
     public:
-        virtual void gimbol_rotating()=0;
+        virtual void gimbol_rotating(int rot_toward)=0;
         virtual void chassis_rotating()=0;
         virtual void move()=0;
         virtual void shoot()=0;
