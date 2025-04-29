@@ -1,4 +1,4 @@
-
+#include "../Decisionclass/Decision.h"
 class Robot
 {
     public:
@@ -14,9 +14,9 @@ class Robot
             this->h=0;
             this->v=0;
             this->sheild=0;
-            this->decisions=new int[11];//[方向，前进距离，前进速度，旋转方向，旋转距离，旋转速度，射击，射击方向，射速，取弹,倒弹]
-            for(int i=0;i<11;i++)
-            decisions[i]=0;
+            // this->decisions=new int[11];//[方向，前进距离，前进速度，旋转方向，旋转距离，旋转速度，射击，射击方向，射速，取弹,倒弹]
+            // for(int i=0;i<11;i++)
+            // decisions[i]=0;
         }
     public:
         virtual void gimbol_rotating()=0;
@@ -26,8 +26,7 @@ class Robot
         virtual void clamping()=0;
         virtual void pour()=0;
         virtual void decision()=0;
-    public:
         int x,y,blood,toward,colour,omega,ammunition,num,theta,h,sheild;
-        int* decisions;
+        // int* decisions;
         float v;
 };
