@@ -1,4 +1,5 @@
 #include "./RobotBase.h"
+#include<iostream>
 class Robot_ep:public Robot
 {
     public:
@@ -26,4 +27,19 @@ class Robot_ep:public Robot
             dec->decisions[2]=mov_v;
             this->dec_list.push_back(*dec);
         }
+        void shoot(int work_time)
+        {
+            cout<<"ERROR:ep机器人中shoot()函数为空"<<endl;
+        }
+        void clamping(int work_time)
+        {
+            Decision* dec=new Decision(this->num,this->colour,work_time);
+            dec->decisions[11]=1;
+        }
+        void pour(int work_time)
+        {
+            Decision* dec=new Decision(this->num,this->colour,work_time);
+            dec->decisions[12]=1;
+        }
+        
 };
